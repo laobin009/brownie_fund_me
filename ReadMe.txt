@@ -57,3 +57,10 @@
     3. command - [git add ReadMe.txt]
     4. command - [git commit -m "Files update"]
     5. command - [git push -u origin main]
+
+9. Run tests
+    1. Brownie Ganache Chain with Mocks: Always
+    2. Testnet: Always (but only for integration testing)
+    3. Brownie mainnet-fork: Optional
+    4. Custom mainnet-fork: Optional
+    5. Self/Local Ganache: Notnecessary, but good for tinkering.
