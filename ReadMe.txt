@@ -40,3 +40,13 @@
         so we cannot run fund_and_withdraw.py after deploy.py
         since contract deployed in deploy.py is gone and clean out
         when we run fund_and_withdraw.py
+
+8. Upload code to Github
+    1. command - [git init -b main]
+    2. command - [git config user.name "laobin009"]
+        command - [git confi user.email"weibin.ye.leaf@gmail.com"]
+    3. add ".env" to ".gitignore"
+    4. command - [git commit -m "first commit"] we need to use double quotations here
+    5. command - [git remote add origin https://github.com/laobin009/brownie_fund_me.git]
+    6. command - [git push -u origin main]
+    7. enter password
