@@ -50,3 +50,10 @@
     5. command - [git remote add origin https://github.com/laobin009/brownie_fund_me.git]
     6. command - [git push -u origin main]
     7. enter password
+
+    Push to github after updating files in local
+    1. command - [git status] - check what has been changed
+    2. command - [git diff] - check changes details
+    3. command - [git add ReadMe.txt]
+    4. command - [git commit -m "Files update"]
+    5. command - [git push -u origin main]
