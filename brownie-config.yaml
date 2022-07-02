@@ -1,0 +1,39 @@
+dependencies:
+  # - <organization/repo>@<version>
+  - smartcontractkit/chainlink-brownie-contracts@0.4.1
+
+# telling the compiler that
+# when it sees @chainlink
+# it means "smartcontractkit/chainlink-brownie-contracts@1.1.1"
+# so it will download from Github
+compiler:
+  solc:
+    remappings:
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@0.4.1'
+
+# copy the setup from "brownie_simple_storage" project
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
+
+# adding address to get eth-to-usd price based on networks
+# add address for kovan, mainnet and other networks
+# we cannot have empty fields or unnecessary indentation
+# otherwise, there will be error "argument of type 'NoneType' is not iterable"
+
+# if we are in the development network, we don't need to have API key to verify
+# and publish contract, thus verify: False
+networks:
+  default: mainnet-fork-dev
+  rinkeby:
+    eth_usd_price_feed: '0x8A753747A1Fa494EC906cE90E9f37563A8AF630e'
+    verify: True
+  mainnet-fork-dev:
+    eth_usd_price_feed: '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'
+    verify: False
+  development:
+    verify: False
+  ganache-local:
+    verify: False
+# kovan:
+# mainnet:
